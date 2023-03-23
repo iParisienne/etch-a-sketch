@@ -1,13 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: #092327;
+}
+
 .wrapper{
     display: flex;
 }
 
 .grid{
+    background: white;
     display: flex;
-    border: 1px solid black;
     width: 520px;
     height: 520px;
     align-items: stretch;
+    -webkit-box-shadow: 5px 5px 0px 0px #aad4d4, 10px 10px 0px 0px #5fa19f, 15px 15px 0px 0px #0B5351, 20px 20px 0px 0px #063d3b, 25px 25px 0px 0px #092327;
+    box-shadow: 5px 5px 0px 0px #aad4d4, 10px 10px 0px 0px #5fa19f, 15px 15px 0px 0px #0B5351, 20px 20px 0px 0px #063d3b, 25px 25px 0px 0px #092327; 
 }
 
 .parentSquare{
@@ -17,6 +25,12 @@
 }
 
 .square{
-    background: blueviolet;
     flex: 1;
 }
+
+/* 
+Trying following color Palette
+#092327 > MAIN-BG
+#FAFEFF > FONT
+#0B5351 > FOOTER
+*/

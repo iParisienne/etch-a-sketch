@@ -1,11 +1,11 @@
-const body = document.body; 
+const main = document.querySelector('.main'); 
 const wrapper = document.createElement('div');
 const grid = document.createElement('div'); 
 let amountOfDivsX = 16; //define how many divs should be created on x-axis
 let amountOfDivsY = 16; //y-axis
 
 wrapper.classList.add('wrapper');
-body.appendChild(wrapper);
+main.appendChild(wrapper);
 grid.classList.add('grid'); 
 wrapper.appendChild(grid); //put grid inside of wrapper so that it's own element for the border property
 
