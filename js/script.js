@@ -8,7 +8,6 @@ body.appendChild(grid);
 
 for(let i = 0; i < amountOfDivsX; i++){ // append ${amountOfDivsX} to grid div
     const divX = document.createElement('div'); 
-    divX.classList.add('square');  
     for(let j = 0; j < amountOfDivsY; j++){ // append ${amountOfDivsY} to each divX div
         const divY = document.createElement('div');
         divY.classList.add('square');
