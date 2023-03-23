@@ -19,3 +19,14 @@ for(let i = 0; i < amountOfDivsX; i++){ // append ${amountOfDivsX} to grid div
     grid.appendChild(divX); 
 }
 
+function mouseOver(){
+    this.style.background = 'black';
+}
+
+const divs = Array.from(document.querySelectorAll('.square'));
+divs.forEach(
+    div => {
+        div.addEventListener('mouseover', mouseOver);
+    }
+);
+
