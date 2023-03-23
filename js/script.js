@@ -1,8 +1,8 @@
 const main = document.querySelector('.main'); 
 const wrapper = document.createElement('div');
 const grid = document.createElement('div'); 
-let amountOfDivsX = 16; //define how many divs should be created on x-axis
-let amountOfDivsY = 16; //y-axis
+let amountOfDivsX = 32; //define how many divs should be created on x-axis
+let amountOfDivsY = 32; //y-axis
 
 wrapper.classList.add('wrapper');
 main.appendChild(wrapper);
@@ -20,8 +20,10 @@ for(let i = 0; i < amountOfDivsX; i++){ // append ${amountOfDivsX} to grid div
     grid.appendChild(divX); 
 }
 
-function mouseOver(){
-    this.style.background = 'black';
+function mouseOver(e){
+    if(e.buttons == 1){
+        this.style.background = 'black';
+    }
 }
 
 const divs = Array.from(document.querySelectorAll('.square'));
