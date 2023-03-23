@@ -1,13 +1,19 @@
-const body = document.body; //save body in variable
-const wrapper = document.createElement('div'); //create wrapper div
-const amountOfDivs = 16; //define how many divs should be created
+const body = document.body; 
+const grid = document.createElement('div'); 
+const amountOfDivsX = 16; //define how many divs should be created on x-axis
+const amountOfDivsY = 16; //y-axis
 
-wrapper.classList.add('wrapper'); //add class wrapper to wrapper
-body.appendChild(wrapper); //append wrapper div to body element
+grid.classList.add('grid'); 
+body.appendChild(grid); 
 
-for(let i = 0; i < amountOfDivs; i++){
-    const div = document.createElement('div'); //create div
-    div.classList.add('square'); //add class square to div
-    wrapper.appendChild(div);  //append div to wrapper
+for(let i = 0; i < amountOfDivsX; i++){ // append ${amountOfDivsX} to grid div
+    const divX = document.createElement('div'); 
+    divX.classList.add('square');  
+    for(let j = 0; j < amountOfDivsY; j++){ // append ${amountOfDivsY} to each divX div
+        const divY = document.createElement('div');
+        divY.classList.add('square');
+        divX.appendChild(divY);
+    }
+    grid.appendChild(divX); 
 }
 
