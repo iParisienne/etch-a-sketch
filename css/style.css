@@ -5,9 +5,15 @@ body{
 }
 
 body{
+    background: url('../img/bg.jpg');
+    background-size: 100% auto;
+    background-color: #092327;;
+}
+
+body{
     margin: 0;
     padding: 0;
-    background: #092327;
+   
     color: #FAFEFF;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -39,8 +45,8 @@ body{
     width: 520px;
     height: 520px;
     align-items: stretch;
-    -webkit-box-shadow: 5px 5px 0px 0px #aad4d4, 10px 10px 0px 0px #5fa19f, 15px 15px 0px 0px #0B5351, 20px 20px 0px 0px #063d3b, 25px 25px 0px 0px #092327; /*border effect*/
-    box-shadow: 5px 5px 0px 0px #aad4d4, 10px 10px 0px 0px #5fa19f, 15px 15px 0px 0px #0B5351, 20px 20px 0px 0px #063d3b, 25px 25px 0px 0px #092327; /*border effect*/
+    -webkit-box-shadow: 5px 5px 0px 0px #aad4d4, 10px 10px 0px 0px #5fa19f, 15px 15px 0px 0px #0B5351; /*border effect*/
+    box-shadow: 5px 5px 0px 0px #aad4d4, 10px 10px 0px 0px #5fa19f, 15px 15px 0px 0px #0B5351; /*border effect*/
 }
 
 .parentSquare{
