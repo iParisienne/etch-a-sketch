@@ -2,8 +2,9 @@ const main = document.querySelector('.main');
 const wrapper = document.createElement('div');
 const grid = document.createElement('div'); 
 const stylebar = document.querySelector('.stylebar');
-let amountOfDivsX = 32; //define how many divs should be created on x-axis
-let amountOfDivsY = 32; //y-axis
+const gridsizeInput = document.querySelector('#gridsize-input');
+let amountOfDivsX = 16; //define how many divs should be created on x-axis
+let amountOfDivsY = 16; //y-axis
 
 wrapper.classList.add('wrapper');
 main.appendChild(wrapper);
@@ -23,7 +24,7 @@ for(let i = 0; i < amountOfDivsX; i++){ // append ${amountOfDivsX} to grid div
 
 function mouseOverBlack(e){
     if(e.buttons == 1){
-        this.style.background = 'black';
+        this.classList.add('setBlack');
     }
 }
 
@@ -44,4 +45,20 @@ divs.forEach(
 
 stylebar.addEventListener('mouseover', mouseOverOpacity);
 stylebar.addEventListener('mouseout', mouseOutOpacity);
+
+if(gridsizeInput.value == ''){
+    gridsizeInput.value = amountOfDivsX;
+}
+
+function onGridSizeInputChange(){
+    amountOfDivsX = gridsizeInput.value;
+    amountOfDivsY = gridsizeInput.value;
+}
+
+gridsizeInput.addEventListener('change', onGridSizeInputChange);
+
+function control(){
+    console.log(amountOfDivsX);
+    console.log(amountOfDivsY);
+}
 

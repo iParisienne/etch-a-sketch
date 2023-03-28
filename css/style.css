@@ -46,12 +46,23 @@ body{
 }
 
 .stylebar{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     height: 520px;
     width: 300px;
     background: white;
     opacity: 0.5;
     -webkit-box-shadow: -5px 5px 0px 0px #aad4d4, -10px 10px 0px 0px #5fa19f, -15px 15px 0px 0px #0B5351;
     box-shadow: -5px 5px 0px 0px #aad4d4, -10px 10px 0px 0px #5fa19f, -15px 15px 0px 0px #0B5351;
+}
+
+.stylebar-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid{
@@ -72,6 +83,10 @@ body{
 
 .square{
     flex: 1; /*so that square (y) aligns to parentSquare*/
+}
+
+.setBlack{ /*add this class on hover*/
+    background: black;
 }
 
 .footer{
