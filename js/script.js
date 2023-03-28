@@ -1,6 +1,7 @@
 const main = document.querySelector('.main'); 
 const wrapper = document.createElement('div');
 const grid = document.createElement('div'); 
+const stylebar = document.querySelector('.stylebar');
 let amountOfDivsX = 32; //define how many divs should be created on x-axis
 let amountOfDivsY = 32; //y-axis
 
@@ -20,16 +21,27 @@ for(let i = 0; i < amountOfDivsX; i++){ // append ${amountOfDivsX} to grid div
     grid.appendChild(divX); 
 }
 
-function mouseOver(e){
+function mouseOverBlack(e){
     if(e.buttons == 1){
         this.style.background = 'black';
     }
 }
 
+function mouseOverOpacity(){
+    this.style.opacity = '1';
+}
+
+function mouseOutOpacity(){
+    this.style.opacity = '0.5';
+}
+
 const divs = Array.from(document.querySelectorAll('.square'));
 divs.forEach(
     div => {
-        div.addEventListener('mouseover', mouseOver);
+        div.addEventListener('mouseover', mouseOverBlack);
     }
 );
+
+stylebar.addEventListener('mouseover', mouseOverOpacity);
+stylebar.addEventListener('mouseout', mouseOutOpacity);
 
