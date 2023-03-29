@@ -9,13 +9,14 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-color: #092327;
-}
-
-body{
     margin: 0;
     padding: 0;
     color: #FAFEFF;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.header h1{
+    margin-bottom: 0;
 }
 
 .container{
@@ -50,7 +51,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 520px;
     width: 300px;
     background: white;
@@ -63,21 +64,37 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .stylebar-box hr{
-    border: none;
-    border-top: 3px solid black;
-    overflow: visible;
-    height: 5px;
-    margin-bottom: 1em;
+    border: 0;
+    overflow: hidden;
+    height: 16px;
+    margin-bottom: 18px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
 }
 
-.stylebar-box hr:after {
+.stylebar-box hr:after{
     background: #fff;
-    content: '//////////////////////////////';
+    content: '_________________________________';
     position: relative;
-    top: -13px;
+    background-color:#aad4d4;
+}
+
+.stylebar-box input[type="number"]{
+    margin-bottom: 10px;
+}
+
+#colorpicker-input{
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    border: 0;
+    background-color: #fff;
 }
 
 .grid{
@@ -110,6 +127,10 @@ body{
     align-items: center;
 }
 
+.footer h3{
+    margin-bottom: 0;
+}
+
 .footer img{
     height: 100px;
 	width: auto;
@@ -121,7 +142,6 @@ Trying following color Palette
 #FAFEFF > FONT
 #0B5351 > FOOTER
 */
-
 
 .circle-container {
     position: absolute;

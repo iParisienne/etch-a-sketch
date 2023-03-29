@@ -3,13 +3,26 @@ const wrapper = document.createElement('div');
 const grid = document.createElement('div'); 
 const stylebar = document.querySelector('.stylebar');
 const gridsizeInput = document.querySelector('#gridsize-input');
+const resetGridBtn = document.querySelector('.resetGrid-btn');
 let amountOfDivsX = 16; //define how many divs should be created on x-axis
 let amountOfDivsY = 16; //y-axis
 
 wrapper.classList.add('wrapper');
 main.appendChild(wrapper);
 grid.classList.add('grid'); 
-wrapper.appendChild(grid); //put grid inside of wrapper so that it's own element for the border property
+wrapper.appendChild(grid); 
+
+function defaultValuesGrid(){
+    gridsizeInput.value = 16;
+    amountOfDivsX = 16;
+    amountOfDivsY = 16;
+}
+
+function defaultOperationGrid(){
+    resetGrid();
+    createGrid(amountOfDivsX, amountOfDivsY);
+    addClassSetBlack();
+}
 
 function createGrid(x, y){
     for(let i = 0; i < x; i++){ // append ${amountOfDivsX} to grid div
@@ -24,13 +37,18 @@ function createGrid(x, y){
     }
 }
 
-function resetGrid(){
+function resetGrid(){ 
     while(grid.firstChild){
         grid.removeChild(grid.lastChild);
     }
 }
 
-function mouseOverBlack(e){
+function resetGridBtnFunc(){ 
+    defaultValuesGrid();
+    defaultOperationGrid();
+}
+
+function mouseOverBlack(e){ 
     if(e.buttons == 1){
         this.classList.add('setBlack');
     }
@@ -55,16 +73,12 @@ function addClassSetBlack(){
 
 function onGridSizeInputChange(){
     if(gridsizeInput.value < 2 || gridsizeInput.value > 100){
-        gridsizeInput.value = 16;
-        amountOfDivsX = 16;
-        amountOfDivsY = 16;
+        defaultValuesGrid();
     }else{
         amountOfDivsX = gridsizeInput.value;
         amountOfDivsY = gridsizeInput.value;
     }
-    resetGrid();
-    createGrid(amountOfDivsX, amountOfDivsY);
-    addClassSetBlack();
+    defaultOperationGrid();
 }
 
 if(gridsizeInput.value == ''){
@@ -76,6 +90,7 @@ if(gridsizeInput.value == ''){
 stylebar.addEventListener('mouseover', mouseOverOpacity);
 stylebar.addEventListener('mouseout', mouseOutOpacity);
 gridsizeInput.addEventListener('change', onGridSizeInputChange);
+resetGridBtn.addEventListener('click', resetGridBtnFunc);
 
 function control(){
     console.log(amountOfDivsX);
