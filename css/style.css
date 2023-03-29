@@ -89,12 +89,18 @@ body{
     margin-bottom: 10px;
 }
 
-#colorpicker-input{
-    padding: 0;
-    height: 60px;
-    width: 60px;
-    border: 0;
-    background-color: #fff;
+.colorpicker{
+    width:60px;
+    height:60px;
+    overflow: hidden;
+    border-radius:100%;
+}
+
+.colorpicker input[type="color"]{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scale(1.5);
 }
 
 .grid{
