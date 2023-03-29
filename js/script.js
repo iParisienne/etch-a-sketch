@@ -54,8 +54,14 @@ function addClassSetBlack(){
 }
 
 function onGridSizeInputChange(){
-    amountOfDivsX = gridsizeInput.value;
-    amountOfDivsY = gridsizeInput.value;
+    if(gridsizeInput.value < 2 || gridsizeInput.value > 100){
+        gridsizeInput.value = 16;
+        amountOfDivsX = 16;
+        amountOfDivsY = 16;
+    }else{
+        amountOfDivsX = gridsizeInput.value;
+        amountOfDivsY = gridsizeInput.value;
+    }
     resetGrid();
     createGrid(amountOfDivsX, amountOfDivsY);
     addClassSetBlack();
