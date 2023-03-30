@@ -9,8 +9,8 @@ At first I didn't know exactly on how to implement the particle background effec
 and implemented three simple div boxes with some content and got it to work. Ofourse I had the problem that the particles would be "over" the grid, so I could test around
 with the z-index property, which is the reason why the *container-content* class is in the foreground (including all its children).  
   
-I never got really got stuck anywhere - I'd say, the biggest hurdle was to get both eventListeners (mouseover and click) to function properly in conjunction. 
-Honestly, the most time i've "Lost" was to get a result which is visually appealing to me, thus fiddling alot with my css. But I'd say it came out pretty good.
+I never really got stuck anywhere - I'd say, the biggest hurdle was to get both eventListeners (mouseover and click) to function properly in conjunction. 
+The most time i've "lost" was to get a result which is visually appealing to me, thus fiddling alot with my css. But I'd say it came out pretty good.
 
 ## Live Preview
 Can be found [here](https://iparisienne.github.io/etch-a-sketch/)!
